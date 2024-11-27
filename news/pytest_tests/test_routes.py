@@ -20,6 +20,7 @@ def test_pages_availability_for_anonymous_user(client, name, news, args):
     response = client.get(url)
     assert response.status_code == HTTPStatus.OK
 
+
 @pytest.mark.parametrize(
     'parametrized_client, expected_status',
     (
